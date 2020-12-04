@@ -1,23 +1,18 @@
+#!/usr/bin/python3
+
 import os
-current_working_directory = os.getcwd()
-values = []
+import pycommon.advent as advent
+
+problem_key = os.path.basename(__file__).replace(".py", "")
 
 
-def read_file_into_dictionary():
-    file = "{}/input.txt".format(current_working_directory)
-    data = open(file, 'r')
-    lines = data.readlines()
-    for line in lines:
-        values.append(line.rstrip())
-
-
-def trees_encountered_part_2():
+def trees_encountered_part_2(input):
     trees = [
-        trees_encountered(1, 1),
-        trees_encountered(3, 1),
-        trees_encountered(5, 1),
-        trees_encountered(7, 1),
-        trees_encountered(1, 2)
+        trees_encountered(1, 1, input),
+        trees_encountered(3, 1, input),
+        trees_encountered(5, 1, input),
+        trees_encountered(7, 1, input),
+        trees_encountered(1, 2, input)
     ]
     product = 1
     for tree in trees:
@@ -26,12 +21,12 @@ def trees_encountered_part_2():
     print("Product of runs: {}".format(product))
 
 
-def trees_encountered(right, down):
+def trees_encountered(right, down, input):
     current = 0
     length = 0
     trees = 0
     count = 0
-    for row in values:
+    for row in input:
         temp = list(row)
         if length == 0:             # Eat first row, continue
             length = len(row) - 1
@@ -52,11 +47,11 @@ def trees_encountered(right, down):
     return trees
 
 
-# Script entry point
-read_file_into_dictionary()
-# part 1
-print(" Part 1 : ")
-trees_encountered(3, 1)
+def main():
+    forest_layout = advent.read_input(os.getcwd(), problem_key)
+    trees_encountered(3, 1, forest_layout)
+    trees_encountered_part_2(forest_layout)
 
-print(" Part 2 :")
-trees_encountered_part_2()
+
+if __name__ == "__main__":
+    main()
