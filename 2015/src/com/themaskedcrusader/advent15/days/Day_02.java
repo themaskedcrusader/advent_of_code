@@ -4,7 +4,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class DayTwo extends AdventDay {
+public class Day_02 extends AdventDay {
     String problem = "day_2";
 
     @Override

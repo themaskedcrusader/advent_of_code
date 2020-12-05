@@ -2,7 +2,7 @@ package com.themaskedcrusader.advent15.days;
 
 import java.io.File;
 
-public class DayOne extends AdventDay {
+public class Day_01 extends AdventDay {
     String problem = "day_1";
 
     @Override
