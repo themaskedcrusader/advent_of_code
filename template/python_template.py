@@ -10,9 +10,9 @@ problem_key = os.path.basename(__file__).replace(".py", "")
 
 
 def main():
-    forest_layout = advent.read_input(os.getcwd(), problem_key)
-    trees_encountered(3, 1, forest_layout)
-    trees_encountered_part_2(forest_layout)
+    var = advent.read_input(os.getcwd(), problem_key)
+    # function part 1
+    # function part 2
 
 
 if __name__ == "__main__":
