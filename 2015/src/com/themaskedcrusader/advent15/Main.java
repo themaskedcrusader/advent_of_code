@@ -1,6 +1,6 @@
 package com.themaskedcrusader.advent15;
 
-import com.themaskedcrusader.advent15.days.DayOne;
+import com.themaskedcrusader.advent15.days.*;
 
 import java.io.File;
 
@@ -16,8 +16,8 @@ public class Main {
             usage();
         } else {
             File inputDirectory = new File(args[0]);
-            new DayOne().execute(inputDirectory);
-
+//            new DayOne().execute(inputDirectory);
+            new DayTwo().execute(inputDirectory);
 
         }
     }
