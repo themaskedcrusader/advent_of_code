@@ -59,7 +59,6 @@ def main():
     boarding_passes = advent.read_input(os.getcwd(), problem_key)
     highest_boarding_pass_value(boarding_passes)
     what_s_my_seat_number(boarding_passes)
-    # function part 2
 
 
 if __name__ == "__main__":

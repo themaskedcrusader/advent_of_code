@@ -8,22 +8,6 @@ problem_key = os.path.basename(__file__).replace(".py", "")
 passports = []
 
 
-def read_passports(passport_input_file):
-    passport_string = ""
-    file = open(passport_input_file, 'r')
-    lines = file.readlines()
-    for line in lines:
-        if line.rstrip() == "":
-            passports.append(passport_string)
-            passport_string = ""
-            continue
-        else:
-            passport_string = "{} {}".format(passport_string, line.rstrip())
-
-    # Capture the last passport that may
-    passports.append(passport_string)
-
-
 def validate_passports():
     ret = []
     passport = {}
@@ -104,8 +88,8 @@ def how_many_valid_passports_part_2():
 
 
 def main():
-    file = advent.get_full_file_path(os.getcwd(), problem_key)
-    read_passports(file)
+    global passports
+    passports = advent.read_groups_as_row(os.getcwd(), problem_key)
     how_many_valid_passports_part_1()
     how_many_valid_passports_part_2()
 
