@@ -17,8 +17,8 @@ public class Main {
         } else {
             File inputDirectory = new File(args[0]);
 //            new Day_01().execute(inputDirectory);
-            new Day_02().execute(inputDirectory);
-
+//            new Day_02().execute(inputDirectory);
+            new Day_03().execute(inputDirectory);
         }
     }
 }
