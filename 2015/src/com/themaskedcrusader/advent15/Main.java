@@ -18,7 +18,8 @@ public class Main {
             File inputDirectory = new File(args[0]);
 //            new Day_01().execute(inputDirectory);
 //            new Day_02().execute(inputDirectory);
-            new Day_03().execute(inputDirectory);
+//            new Day_03().execute(inputDirectory);
+            new Day_04().execute(inputDirectory);
         }
     }
 }
