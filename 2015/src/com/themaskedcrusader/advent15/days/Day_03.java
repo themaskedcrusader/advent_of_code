@@ -40,7 +40,7 @@ public class Day_03 extends AdventDay {
             }
             who++;
         }
-        System.out.println("Part 1: Number of unique visits : " + visits.size());
+        System.out.println("Part 2: Number of unique visits : " + visits.size());
     }
 
     void movePoint(Point point, char move) {
