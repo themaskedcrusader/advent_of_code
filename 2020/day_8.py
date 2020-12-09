@@ -41,7 +41,7 @@ def flip(instruction):
 
 def fix_code(code, test):
     attempt = copy.deepcopy(code)
-    found = 0
+    found = -1
     for count in range(0, len(code)):
         instruction, value = code[count].split()
         if instruction == "jmp" or instruction == "nop":
@@ -61,11 +61,11 @@ def part_one_infinite_loop(code):
 def part_two_attempt_a_fix(code):
     acc_value = 0
     passed = False
-    test = 1
+    test = 0
     while not passed:
         test, attempt = fix_code(code, test)
         acc_value, passed = run_the_program(attempt)
-    print("Part 2: the program {}; acc value = {}".format(get_status(passed), acc_value))
+    print("Part 2: the program passed after {} tests ; acc value = {}".format(test, acc_value))
 
 
 def main():
