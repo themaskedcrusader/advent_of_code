@@ -20,7 +20,7 @@ def find_flaw(data_set, index, length):
     flaw_set = []
     for i in range(0, length):
         flaw_set.append(data_set[index + i])
-    print("Flaw index value = {}".format(int(min(flaw_set)) + int(max(flaw_set))))
+    print("Part 2: Flaw index value : {}".format(int(min(flaw_set)) + int(max(flaw_set))))
 
 
 def part_1_first_failure(data_set, preamble_size):
@@ -32,7 +32,7 @@ def part_1_first_failure(data_set, preamble_size):
             count += 1
         else:
             if not is_valid(value, queue):
-                print("First Failure : {}".format(value))
+                print("Part 1: First Failure in set : {}".format(value))
                 return value
             else:
                 queue.popleft()
