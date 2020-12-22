@@ -15,6 +15,16 @@ def read_input(cwd, problem_key):
     return ret
 
 
+def read_numerical_input(cwd, problem_key):
+    file = get_full_file_path(cwd, problem_key)
+    ret = []
+    data = open(file, 'r')
+    lines = data.readlines()
+    for line in lines:
+        ret.append(int(line))
+    return ret
+
+
 def read_groups_as_row(cwd, problem_key):
     file = get_full_file_path(cwd, problem_key)
     ret = []
