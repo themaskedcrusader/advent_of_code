@@ -69,5 +69,13 @@ def read_baggage(cwd, problem_key):
     return ret
 
 
+def read_bus_routes(cwd, problem_key):
+    file = get_full_file_path(cwd, problem_key)
+    file = open(file, 'r')
+    current_time = file.readline()
+    bus_routes = file.readline()
+    return current_time, bus_routes
+
+
 
 
