@@ -1,4 +1,4 @@
-// Advent day 01 part 01 : Number of increases
+// Advent 01b
 #include <iostream>
 #include <fstream>
 
@@ -8,7 +8,6 @@ int main(int argc, char ** argv) {
     std::ifstream input {argv[1]};
     int increases = -1, depth1, depth2 = -1, depth3 = -1, sum_previous = 0;
 
-    // firstLine
     while (input >> depth1) {
         if (depth3 != -1) {
             auto sum_next = depth1 + depth2 + depth3;
